@@ -1,190 +1,182 @@
 // src/pages/Dashboard/HrDashboard.jsx
 
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
-  FiHeart, FiUsers, FiArrowUpRight, FiArrowDownRight, FiMinus,
-  FiUser, FiTarget, FiZap, FiMail, FiInfo, FiCopy
-} from "react-icons/fi"; 
+  FiHeart,
+  FiUsers,
+  FiUser,
+  FiTarget,
+  FiZap,
+  FiMail,
+  FiInfo,
+  FiCopy,
+} from "react-icons/fi";
 
-// Importar o componente Modal e LanguageSwitcher
-import Modal from "../../components/Modal"; 
-import LanguageSwitcher from "../../components/LanguageSwitcher"; 
+import Modal from "../../components/Modal";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { translations } from "../../locales/translations";
 
-// Importar as traduções
-import { translations } from "../../locales/translations"; 
+// --- FUNÇÕES UTILITÁRIAS ---
 
-const initialTeamMetrics = {
-  saudeGeral: {
-    percent: null, 
-    tendencia: null
-  },
-  engajamento: {
-    percent: null, 
-    tendencia: null
-  },
-};
-
-const initialIndividualMembers = [
-  {
-    id: 'm1',
-    name: 'Talita Mendes',
-    role: 'Líder de Equipe',
-    foco: 70,
-    empenho: 75,
-    saudeEmocional: 60,
-    lastCheckIn: "2025-06-17T10:00:00",
-    insights: {
-      foco: 'Consegue manter o foco na maioria das tarefas, mas pode se dispersar com interrupções.',
-      empenho: 'Esforça-se para atingir metas, buscando sempre a melhoria contínua.',
-      saudeEmocional: 'Demonstra boa adaptabilidade, mas pode sentir a pressão em momentos de pico.',
-    },
-    email: 'talita.mendes@proa.com'
-  },
-  {
-    id: 'm2',
-    name: 'Gabriel Alves',
-    role: 'Desenvolvedor Pleno',
-    foco: 85,
-    empenho: 90,
-    saudeEmocional: 80,
-    lastCheckIn: "2025-06-18T14:30:00",
-    insights: {
-      foco: 'Excelente concentração em suas atividades de desenvolvimento.',
-      empenho: 'Altamente motivado e entrega resultados consistentes e de alta qualidade.',
-      saudeEmocional: 'Apresenta um ótimo bem-estar emocional, resiliente a desafios.',
-    },
-    email: 'gabriel.alves@proa.com'
-  },
-];
-
-
-// --- FUNÇÕES UTILITÁRIAS (Adaptadas para usar traduções) ---
-
-// Função global para obter o texto traduzido
+/**
+ * Hook personalizado para acessar as traduções com base no idioma selecionado.
+ * @param {string} lang - O código do idioma ('pt' para português, 'en' para inglês, 'es' para espanhol).
+ * @returns {Function} Uma função que recebe uma chave e retorna a string traduzida.
+ */
 const useTranslation = (lang) => {
-  return useCallback((key) => {
-    // Verifique se o idioma existe e a chave existe dentro do idioma
-    return translations[lang] && translations[lang][key] !== undefined
-           ? translations[lang][key]
-           : key; // Retorna a chave se a tradução não for encontrada
-  }, [lang]);
+  return useCallback(
+    (key) => {
+      // Retorna a tradução correspondente à chave e idioma, ou a própria chave se não encontrada.
+      return translations[lang] && translations[lang][key] !== undefined
+        ? translations[lang][key]
+        : key;
+    },
+    [lang]
+  );
 };
 
-const formatDateTime = (dateString) => {
-  if (!dateString) return "N/A";
-  const date = new Date(dateString);
+/**
+ * Formata um objeto Date para uma string de data e hora no formato brasileiro (dd/MM/yyyy HH:mm:ss).
+ * @param {Date} date - O objeto Date a ser formatado.
+ * @returns {string} A data e hora formatada ou "N/A" se o objeto Date for inválido.
+ */
+const formatDateTime = (date) => {
+  // Verifica se a entrada é um objeto Date válido.
+  if (!(date instanceof Date) || isNaN(date)) return "N/A";
   const options = {
-    year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', minute: '2-digit', second: '2-digit',
-    hour12: false
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
   };
-  // Mantém PT-BR para a formatação da data/hora, independente do idioma do conteúdo
-  return new Intl.DateTimeFormat('pt-BR', options).format(date); 
+  return new Intl.DateTimeFormat("pt-BR", options).format(date);
 };
 
-// Determina a cor e o ícone da tendência (FiArrowUpRight, FiArrowDownRight, FiMinus)
-const getTrendDisplay = (tendencia, t) => {
-  let icon = <FiMinus className="w-5 h-5" />;
-  let color = "text-gray-400";
-  let text = t("noChange"); // Usando a tradução
-
-  if (tendencia === null) {
-      return { icon: <FiMinus className="w-5 h-5" />, color: "text-gray-500", text: t("noTrendData") };
-  }
-
-  if (tendencia && tendencia.startsWith("+")) {
-    icon = <FiArrowUpRight className="w-5 h-5" />;
-    color = "text-green-400";
-    text = `${t("increaseOf")} ${tendencia.substring(1)}`; // Usando a tradução
-  } else if (tendencia && tendencia.startsWith("-")) {
-    icon = <FiArrowDownRight className="w-5 h-5" />;
-    color = "text-red-400";
-    text = `${t("decreaseOf")} ${tendencia.substring(1)}`; // Usando a tradução
-  } else if (tendencia === "0%") {
-    icon = <FiMinus className="w-5 h-5" />;
-    color = "text-gray-400";
-    text = t("noChange"); // Usando a tradução
-  }
-  return { icon, color, text };
+/**
+ * Retorna o texto descritivo de status para um percentual.
+ * A colorização é tratada diretamente no componente de apresentação.
+ * @param {number|null} percent - O valor percentual da métrica.
+ * @param {Function} t - Função de tradução.
+ * @returns {{status: string}} Objeto contendo a string de status traduzida.
+ */
+const getStatusText = (percent, t) => {
+  if (percent === null) return { status: t("noData") };
+  if (percent >= 80) return { status: t("excellent") };
+  if (percent >= 60) return { status: t("good") };
+  if (percent >= 40) return { status: t("attention") };
+  return { status: t("critical") };
 };
 
-// Determina o status textual e a cor para porcentagens (geral e individual)
-const getStatusColorAndText = (percent, t) => {
-  if (percent === null) return { status: t("noData"), color: "text-gray-400" };
-  if (percent >= 80) return { status: t("excellent"), color: "text-green-400" };
-  if (percent >= 60) return { status: t("good"), color: "text-yellow-400" };
-  if (percent >= 40) return { status: t("attention"), color: "text-orange-400" };
-  return { status: t("critical"), color: "text-red-400" };
-};
+// --- COMPONENTES REUTILIZÁVEIS ---
 
-
-// --- COMPONENTES REUTILIZÁVEIS (Adaptados para usar traduções) ---
-
-const BaseCard = ({ children, className = "", onClick }) => (
+/**
+ * Componente de card base para consistência visual no dashboard.
+ * Aplica estilos comuns e opcionalmente um cursor e efeito hover se for clicável.
+ * @param {object} props - Propriedades do componente.
+ * @param {React.ReactNode} props.children - Conteúdo a ser renderizado dentro do card.
+ * @param {string} [props.className=""] - Classes CSS adicionais para estilização.
+ * @param {Function} [props.onClick] - Função de callback para o evento de clique no card.
+ * @returns {JSX.Element} Um elemento div estilizado como um card.
+ */
+const BaseCard = ({ children, className = "" }) => (
   <div
-    className={`bg-[#1a1a2e] rounded-xl p-6 shadow-lg border border-gray-700 flex flex-col ${className}`}
-    onClick={onClick}
+    className={`bg-[#1a1a2e] rounded-xl p-6 shadow-lg border hover:border-purple-500 transition-colors flex flex-col ${className}`}
   >
     {children}
   </div>
 );
 
-const GeneralMetricCard = ({ title, percent, trend, icon: IconComponent, t }) => {
-  const { icon: trendIcon, color: trendColor, text: trendText } = getTrendDisplay(trend, t);
-  const { color: percentColor } = getStatusColorAndText(percent, t);
-
+/**
+ * Card para exibir uma métrica para o RH, mostrando apenas o percentual.
+ * O percentual é exibido sempre na cor branca.
+ * @param {object} props - Propriedades do componente.
+ * @param {string} props.title - O título da métrica.
+ * @param {number|null} props.percent - O valor percentual da métrica.
+ * @param {React.ComponentType} props.icon - O componente de ícone a ser exibido.
+ * @param {Function} props.t - Função de tradução.
+ * @returns {JSX.Element} Um card de métrica para o dashboard de RH.
+ */
+const HrMetricCard = ({
+  title,
+  percent,
+  icon: IconComponent,
+  t,
+  className,
+}) => {
+  // <--- ADICIONE 'className' AQUI
   return (
-    <BaseCard className="items-center justify-center min-h-[180px]">
+    <BaseCard
+      className={`items-center justify-center min-h-[180px] ${className}`}
+    >
       <div className="flex items-center gap-3 mb-4">
-        {IconComponent && <IconComponent className="w-9 h-9 text-purple-400" />}
+        {IconComponent && <IconComponent className="w-9 h-9 text-white-400" />}
         <h3 className="font-semibold text-white text-2xl">{title}</h3>
       </div>
       <div className="flex items-center gap-2 mb-2">
-        <div className={`text-6xl font-bold ${percentColor} leading-none`}>
+        {/* A porcentagem é exibida com a cor branca fixa. */}
+        <div className={`text-6xl font-bold text-white leading-none`}>
           {percent !== null ? `${percent}%` : t("noData")}
         </div>
-      </div>
-      <div className={`flex items-center text-base font-bold ${trendColor}`}>
-        {trendIcon}
-        <span className="ml-1">{percent !== null ? trendText : t("noData")}</span>
       </div>
     </BaseCard>
   );
 };
 
-
-const MemberSummaryCard = ({ member, onOpenDetails, t }) => {
-  const { color: focoColor } = getStatusColorAndText(member.foco, t);
-  const { color: empenhoColor } = getStatusColorAndText(member.empenho, t);
-  const { color: saudeColor } = getStatusColorAndText(member.saudeEmocional, t);
-
+/**
+ * Card de sumário para um membro individual, exibindo métricas chave e um botão de detalhes.
+ * As porcentagens individuais são exibidas sempre na cor branca.
+ * @param {object} props - Propriedades do componente.
+ * @param {object} props.member - O objeto de dados do membro.
+ * @param {Function} props.onOpenDetails - Função de callback para abrir o modal de detalhes do membro.
+ * @param {Function} props.t - Função de tradução.
+ * @returns {JSX.Element} Um card de sumário de membro.
+ */
+const MemberSummaryCard = ({ member, onOpenDetails, t,  className }) => {
   return (
-    <BaseCard className="w-full flex flex-col justify-between overflow-hidden">
+    <BaseCard className="w-full flex flex-col justify-between overflow-hidden ${className}">
       <div className="flex items-center gap-4 mb-4">
-        <FiUser className="w-12 h-12 text-indigo-400 p-2 bg-indigo-900/30 rounded-full flex-shrink-0" />
+        <FiUser className="w-12 h-12 text-white p-2 bg-indigo-900/40 rounded-full flex-shrink-0" />
         <div className="flex-1">
-          <h3 className="text-2xl font-bold text-white truncate">{member.name}</h3>
+          <h3 className="text-2xl font-bold text-white truncate">
+            {member.name}
+          </h3>
           <p className="text-gray-400 text-sm truncate">{member.role}</p>
         </div>
       </div>
 
       <div className="space-y-3 mb-4">
         <div className="flex items-center justify-between text-gray-300">
-          <span className="flex items-center gap-2 text-lg"><FiTarget className="text-yellow-400" /> {t("foco")}:</span>
-          <span className={`${focoColor} font-bold text-lg`}>{member.foco}%</span>
+          <span className="flex items-center gap-2 text-lg">
+            <FiTarget className="text-yellow-400" /> {t("foco")}:
+          </span>
+          {/* A porcentagem é exibida com a cor branca fixa. */}
+          <span className={`text-white font-bold text-lg`}>{member.foco}%</span>
         </div>
         <div className="flex items-center justify-between text-gray-300">
-          <span className="flex items-center gap-2 text-lg"><FiZap className="text-pink-400" /> {t("empenho")}:</span>
-          <span className={`${empenhoColor} font-bold text-lg`}>{member.empenho}%</span>
+          <span className="flex items-center gap-2 text-lg">
+            <FiZap className="text-pink-400" /> {t("empenho")}:
+          </span>
+          {/* A porcentagem é exibida com a cor branca fixa. */}
+          <span className={`text-white font-bold text-lg`}>
+            {member.empenho}%
+          </span>
         </div>
         <div className="flex items-center justify-between text-gray-300">
-          <span className="flex items-center gap-2 text-lg"><FiHeart className="text-teal-400" /> {t("emotionalHealth")}:</span>
-          <span className={`${saudeColor} font-bold text-lg`}>{member.saudeEmocional}%</span>
+          <span className="flex items-center gap-2 text-lg">
+            <FiHeart className="text-white" /> {t("emotionalHealth")}:
+          </span>
+          {/* A porcentagem é exibida com a cor branca fixa. */}
+          <span className={`text-white font-bold text-lg`}>
+            {member.saudeEmocional}%
+          </span>
         </div>
       </div>
 
       <button
-        className="w-full bg-blue-700 hover:bg-blue-600 text-white font-medium px-4 py-3 rounded-md flex items-center justify-center gap-2 transition shadow mt-auto"
+        className="w-full bg-purple-800 hover:bg-purple-700 cursor-pointer text-white font-medium px-4 py-3 rounded-md flex items-center justify-center gap-2 transition shadow mt-auto"
         onClick={() => onOpenDetails(member)}
       >
         <FiInfo className="w-5 h-5" /> {t("viewDetails")}
@@ -193,135 +185,181 @@ const MemberSummaryCard = ({ member, onOpenDetails, t }) => {
   );
 };
 
-
 // --- COMPONENTE PRINCIPAL: HR DASHBOARD ---
 export default function HrDashboard() {
-  // Estado para o idioma, lendo do localStorage ao iniciar
-  const [lang, setLang] = useState(() => localStorage.getItem('appLang') || 'pt');
-  
-  // Função de tradução memoizada
+  // Estado para controlar o idioma selecionado, inicializando do localStorage ou 'pt'.
+  const [lang, setLang] = useState(
+    () => localStorage.getItem("appLang") || "pt"
+  );
+  // Hook de tradução para obter strings traduzidas.
   const t = useTranslation(lang);
 
-  const [teamMetrics, setTeamMetrics] = useState(initialTeamMetrics);
-  const [individualMembers, setIndividualMembers] = useState(initialIndividualMembers);
+  // Estado para armazenar a data e hora da última "atualização" simulada.
+  // Inicializado com a data e hora atual no carregamento do componente.
   const [lastUpdateDateTime, setLastUpdateDateTime] = useState(new Date());
-  const [selectedMember, setSelectedMember] = useState(null);
-  const [copyStatus, setCopyStatus] = useState('');
 
-  // Efeito para salvar o idioma no localStorage sempre que ele mudar
+  // Dados estáticos para as métricas gerais da equipe de RH.
+  const [teamMetrics] = useState({
+    saudeGeral: { percent: 78 },
+    engajamento: { percent: 85 },
+  });
+
+  // Dados estáticos para membros individuais
+  const [individualMembers] = useState([
+    {
+      id: "m1",
+      name: "Talita Vitória",
+      role: "Desenvolvedora Back-end",
+      foco: 70,
+      empenho: 75,
+      saudeEmocional: 60,
+      lastCheckIn: new Date(2025, 5, 17, 10, 0, 0), // Mês é 0-indexado (junho é 5)
+      insights: {
+        foco: "Consegue manter o foco na maioria das tarefas, mas pode se dispersar com interrupções.",
+        empenho:
+          "Esforça-se para atingir metas, buscando sempre a melhoria contínua.",
+        saudeEmocional:
+          "Demonstra boa adaptabilidade, mas pode sentir a pressão em momentos de pico.",
+      },
+      email: "talita.mendes@proa.com",
+    },
+    {
+      id: "m2",
+      name: "Gabriel Cabral",
+      role: "Todas, todas elas",
+      foco: 85,
+      empenho: 90,
+      saudeEmocional: 80,
+      lastCheckIn: new Date(2025, 5, 18, 14, 30, 0),
+      insights: {
+        foco: "Excelente concentração em suas atividades de desenvolvimento.",
+        empenho:
+          "Altamente motivado e entrega resultados consistentes e de alta qualidade.",
+        saudeEmocional:
+          "Apresenta um ótimo bem-estar emocional, resiliente a desafios.",
+      },
+      email: "gabriel.cabral@proa.com",
+    },
+  ]);
+
+  // Estado para controlar a exibição do modal de detalhes de um membro.
+  const [selectedMember, setSelectedMember] = useState(null);
+  // Estado para controlar a mensagem de status de cópia de e-mail.
+  const [copyStatus, setCopyStatus] = useState("");
+
+  // Efeito para persistir o idioma selecionado no localStorage sempre que 'lang' muda.
   useEffect(() => {
-    localStorage.setItem('appLang', lang);
+    localStorage.setItem("appLang", lang);
   }, [lang]);
 
-  // Função para mudar o idioma
+  /**
+   * Função para lidar com a mudança de idioma via LanguageSwitcher.
+   * Atualiza o estado 'lang' com o novo idioma selecionado.
+   * @param {string} newLang - O novo código de idioma a ser definido.
+   */
   const handleLanguageChange = (newLang) => {
     setLang(newLang);
   };
 
-  // --- Lógica para CALCULAR métricas gerais baseadas nos membros individuais ---
-  useEffect(() => {
-    if (individualMembers.length > 0) {
-      const totalFoco = individualMembers.reduce((sum, member) => sum + member.foco, 0);
-      const totalEmpenho = individualMembers.reduce((sum, member) => sum + member.empenho, 0);
-      const totalSaudeEmocional = individualMembers.reduce((sum, member) => sum + member.saudeEmocional, 0);
-
-      const avgFoco = Math.round(totalFoco / individualMembers.length);
-      const avgEmpenho = Math.round(totalEmpenho / individualMembers.length);
-      const avgSaudeEmocional = Math.round(totalSaudeEmocional / individualMembers.length);
-
-      const newEngagement = Math.round((avgFoco + avgEmpenho) / 2);
-      const newSaudeGeral = avgSaudeEmocional;
-
-      setTeamMetrics(prev => ({
-        saudeGeral: {
-          percent: newSaudeGeral,
-          tendencia: prev.saudeGeral.percent === null ? null : (newSaudeGeral > prev.saudeGeral.percent ? `+${newSaudeGeral - prev.saudeGeral.percent}%` : (newSaudeGeral < prev.saudeGeral.percent ? `-${prev.saudeGeral.percent - newSaudeGeral}%` : "0%"))
-        },
-        engajamento: {
-          percent: newEngagement,
-          tendencia: prev.engajamento.percent === null ? null : (newEngagement > prev.engajamento.percent ? `+${newEngagement - prev.engajamento.percent}%` : (newEngagement < prev.engajamento.percent ? `-${prev.engajamento.percent - newEngagement}%` : "0%"))
-        },
-      }));
-
-    } else {
-      // Se não houver membros, redefina as métricas para seus estados iniciais nulos
-      setTeamMetrics(initialTeamMetrics); 
-    }
-  }, [individualMembers]); // Dependência em individualMembers
-
+  /**
+   * Abre o modal de detalhes de um membro específico.
+   * Redefine o status de cópia do e-mail.
+   * @param {object} member - O objeto de dados do membro a ser exibido no modal.
+   */
   const handleOpenMemberDetails = (member) => {
     setSelectedMember(member);
-    setCopyStatus('');
+    setCopyStatus(""); // Reseta o status de cópia ao abrir um novo modal.
   };
 
+  /**
+   * Fecha o modal de detalhes do membro.
+   * Limpa o membro selecionado do estado.
+   */
   const handleCloseMemberDetails = () => {
     setSelectedMember(null);
   };
 
+  /**
+   * Copia o endereço de e-mail de um membro para a área de transferência.
+   * Exibe uma mensagem de status temporária.
+   * @param {string} email - O endereço de e-mail a ser copiado.
+   */
   const handleCopyEmail = async (email) => {
     try {
       await navigator.clipboard.writeText(email);
-      setCopyStatus(t('copied')); // Usando tradução
-      setTimeout(() => setCopyStatus(''), 2000);
+      setCopyStatus(t("copied")); // Mensagem de sucesso.
+      setTimeout(() => setCopyStatus(""), 2000); // Limpa a mensagem após 2 segundos.
     } catch (err) {
-      setCopyStatus(t('copyFailed')); // Usando tradução
-      console.error('Erro ao copiar email:', err);
+      setCopyStatus(t("copyFailed")); // Mensagem de falha.
+      console.error("Erro ao copiar email:", err);
     }
   };
 
   return (
     <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto custom-scrollbar">
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 h-full">
-
-        {/* Cabeçalho do Dashboard */}
+        {/* Cabeçalho do Dashboard, incluindo título, subtítulo, seletor de idioma e data da última atualização. */}
         <div className="flex justify-between items-end pb-4 border-b border-gray-700">
           <div>
+            {/* Título do Dashboard de RH, usando a chave de tradução do locales. */}
             <h1 className="text-4xl font-extrabold text-white tracking-tight">
-              {t("dashboardTitle")} <span className="text-pink-400">RH Estratégico</span>
+              {t("dashboardTitleHR")}
             </h1>
+            {/* Subtítulo do Dashboard de RH, usando a chave de tradução do locales. */}
             <p className="text-gray-400 text-lg mt-1">
-              {t("dashboardSubtitle")}
+              {t("dashboardSubtitleHR")}
             </p>
           </div>
-          <div className="text-right flex flex-col items-end">
-            {/* Adicione o seletor de idioma aqui */}
-            <LanguageSwitcher currentLang={lang} onLanguageChange={handleLanguageChange} />
-            <p className="text-gray-500 text-sm mt-2">{t("lastUpdate")}: {formatDateTime(lastUpdateDateTime)}</p>
+          <div className="text-right flex flex-col items-end gap-2">
+            <div className="flex items-center gap-4">
+              {/* Componente para alternar o idioma do dashboard. */}
+              <LanguageSwitcher
+                currentLang={lang}
+                onLanguageChange={handleLanguageChange}
+              />
+            </div>
+            {/* Exibe a data e hora da última atualização usando o estado 'lastUpdateDateTime'. */}
+            <p className="text-gray-500 text-sm mt-2">
+              {t("lastUpdate")}: {formatDateTime(lastUpdateDateTime)}
+            </p>
           </div>
         </div>
 
-        {/* Seção de Métricas Gerais da Equipe */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <GeneralMetricCard
+        {/* Seção de Métricas Gerais da Equipe para o RH, exibindo cards de saúde geral e engajamento. */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          <HrMetricCard
             title={t("teamHealth")}
             percent={teamMetrics.saudeGeral.percent}
-            trend={teamMetrics.saudeGeral.tendencia}
             icon={FiHeart}
-            t={t} // Passa a função de tradução
+            t={t}
+            className="border-green-400"
           />
-          <GeneralMetricCard
+          <HrMetricCard
             title={t("teamEngagement")}
             percent={teamMetrics.engajamento.percent}
-            trend={teamMetrics.engajamento.tendencia}
             icon={FiUsers}
-            t={t} // Passa a função de tradução
+            t={t}
+            className="border border-pink-400"
           />
         </div>
 
-        {/* Seção de Métricas Individuais dos Membros (com cards de sumário) */}
+        {/* Seção de Métricas Individuais dos Membros. */}
         <div className="mt-8">
           <div className="flex items-center gap-4 mb-6">
-            <FiUser className="w-9 h-9 text-indigo-400" />
-            <h2 className="text-3xl font-bold text-indigo-300">{t("individualVision")}</h2>
+            <FiUser className="w-10 h-10 text-white" />
+            <h2 className="text-3xl font-bold text-purple-400">
+              {t("individualVision")}
+            </h2>
           </div>
+          {/* Condicionalmente renderiza os cards de membros ou uma mensagem de ausência de colaboradores. */}
           {individualMembers.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {individualMembers.map(member => (
+              {individualMembers.map((member) => (
                 <MemberSummaryCard
                   key={member.id}
                   member={member}
                   onOpenDetails={handleOpenMemberDetails}
-                  t={t} // Passa a função de tradução
+                  t={t}
                 />
               ))}
             </div>
@@ -333,15 +371,21 @@ export default function HrDashboard() {
           )}
         </div>
 
-        {/* --- MODAL DE DETALHES DO MEMBRO --- */}
+        {/* Modal de Detalhes do Membro, exibido quando um membro é selecionado. */}
         <Modal
           isOpen={!!selectedMember}
           onClose={handleCloseMemberDetails}
+          // Título do modal é dinâmico, mostrando o nome do membro se disponível.
           title={
-            selectedMember ?
-              <span className="text-white">{t("memberDetails")} {selectedMember.name}</span>
-              : <span className="text-white">{t("collaboratorDetails")}</span>
+            selectedMember ? (
+              <span className="text-white">
+                {t("memberDetails")} {selectedMember.name}
+              </span>
+            ) : (
+              <span className="text-white">{t("collaboratorDetails")}</span>
+            )
           }
+          // Rodapé do modal exibe a data do último check-in do membro.
           footerContent={
             selectedMember && selectedMember.lastCheckIn ? (
               <p className="text-gray-500 text-sm mt-4 border-t border-gray-700 pt-3">
@@ -351,17 +395,25 @@ export default function HrDashboard() {
           }
           size="md"
         >
+          {/* Conteúdo do modal é renderizado apenas se um membro estiver selecionado. */}
           {selectedMember && (
             <div className="space-y-4 text-gray-300">
-              {/* Informações básicas do membro */}
+              {/* Informações básicas do membro. */}
               <div className="flex items-center justify-between">
-                <p className="text-lg"><span className="font-semibold text-white">{t("role")}:</span> {selectedMember.role}</p>
+                <p className="text-lg">
+                  <span className="font-semibold text-white">{t("role")}:</span>{" "}
+                  {selectedMember.role}
+                </p>
               </div>
 
-              {/* Email com botão de copiar */}
+              {/* Seção de e-mail com botão para copiar. */}
               <div className="flex items-center justify-between gap-2 bg-gray-800/50 p-3 rounded-md border border-gray-700">
-                <span className="font-semibold text-white text-lg mr-2 flex-shrink-0">{t("email")}:</span>
-                <span className="text-gray-300 text-md truncate flex-grow">{selectedMember.email}</span>
+                <span className="font-semibold text-white text-lg mr-2 flex-shrink-0">
+                  {t("email")}:
+                </span>
+                <span className="text-gray-300 text-md truncate flex-grow">
+                  {selectedMember.email}
+                </span>
                 <button
                   className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-3 py-1 rounded-md flex items-center gap-1 transition shadow-sm text-sm whitespace-nowrap"
                   onClick={() => handleCopyEmail(selectedMember.email)}
@@ -371,25 +423,46 @@ export default function HrDashboard() {
                 </button>
               </div>
 
-              {/* Métricas detalhadas no modal - layout mais denso */}
+              {/* Métricas detalhadas do membro dentro do modal. */}
               <div className="grid grid-cols-1 gap-4 mt-4">
                 <div className="p-3 bg-gray-800/50 rounded-md border border-gray-700">
-                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2"><FiTarget className="text-yellow-400" /> {t("foco")}: <span className={`${getStatusColorAndText(selectedMember.foco, t).color} text-base`}>{selectedMember.foco}%</span></h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{selectedMember.insights.foco}</p>
+                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2">
+                    <FiTarget className="text-yellow-400" /> {t("foco")}:{" "}
+                    <span className={`text-white text-base`}>
+                      {selectedMember.foco}%
+                    </span>
+                  </h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {selectedMember.insights.foco}
+                  </p>
                 </div>
                 <div className="p-3 bg-gray-800/50 rounded-md border border-gray-700">
-                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2"><FiZap className="text-pink-400" /> {t("empenho")}: <span className={`${getStatusColorAndText(selectedMember.empenho, t).color} text-base`}>{selectedMember.empenho}%</span></h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{selectedMember.insights.empenho}</p>
+                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2">
+                    <FiZap className="text-pink-400" /> {t("empenho")}:{" "}
+                    <span className={`text-white text-base`}>
+                      {selectedMember.empenho}%
+                    </span>
+                  </h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {selectedMember.insights.empenho}
+                  </p>
                 </div>
                 <div className="p-3 bg-gray-800/50 rounded-md border border-gray-700">
-                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2"><FiHeart className="text-teal-400" /> {t("emotionalHealth")}: <span className={`${getStatusColorAndText(selectedMember.saudeEmocional, t).color} text-base`}>{selectedMember.saudeEmocional}%</span></h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{selectedMember.insights.saudeEmocional}</p>
+                  <h4 className="font-semibold text-lg text-gray-200 mb-2 flex items-center gap-2">
+                    <FiHeart className="text-purple-400" />{" "}
+                    {t("emotionalHealth")}:{" "}
+                    <span className={`text-white text-base`}>
+                      {selectedMember.saudeEmocional}%
+                    </span>
+                  </h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {selectedMember.insights.saudeEmocional}
+                  </p>
                 </div>
               </div>
             </div>
           )}
         </Modal>
-
       </div>
     </main>
   );

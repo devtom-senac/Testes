@@ -12,7 +12,7 @@ import { MdLightbulb } from 'react-icons/md'; // Importa o ícone de lâmpada do
  */
 export default function RecommendationCard({ atributo, sugestoes, onVerMais, t }) {
   return (
-    <div className="flex-1 min-w-[200px] bg-gray-800 rounded-xl p-6 shadow flex flex-col justify-between">
+    <div className="flex-1 min-w-[200px] bg-gray-800 rounded-xl p-6 shadow flex flex-col justify-between border border-white">
       <div className="flex items-center gap-3 mb-4">
         <MdLightbulb className="w-7 h-7 text-yellow-400" /> {/* Ícone de lâmpada. */}
         <span className="text-lg font-semibold text-yellow-300">{t("recommendations")}</span> {/* Título do cartão traduzido. */}

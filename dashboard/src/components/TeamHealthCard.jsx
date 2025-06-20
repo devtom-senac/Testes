@@ -43,7 +43,7 @@ export default function TeamHealthCard({ percent, tendencia, t, className = "" }
   const isDataAvailable = percent !== null;
 
   return (
-    <div className={`bg-gradient-to-br from-green-900 to-green-950 rounded-xl p-6 shadow-lg flex flex-col justify-center items-center ${className}`}>
+    <div className={`bg-green-500/20 border border-green-500 rounded-xl p-6 shadow-lg flex flex-col justify-center items-center ${className}`}>
 
       <div className="flex items-center gap-3 mb-4">
         <FiHeart className="w-8 h-8 text-white" /> {/* Ícone de coração. */}

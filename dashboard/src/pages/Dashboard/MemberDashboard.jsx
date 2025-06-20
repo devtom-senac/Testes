@@ -111,7 +111,7 @@ export default function MemberDashboard() {
         <div className="pt-2 pb-4 border-b border-gray-700 mb-2 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
-              Dashboard Pessoal
+              Seus indicativos
             </h1>
             <p className="text-gray-400 text-lg mt-1">
               Visão do seu Desempenho e Feedbacks
@@ -121,9 +121,9 @@ export default function MemberDashboard() {
             <img
               src={member.photo}
               alt={member.name}
-              className="w-16 h-16 rounded-full border-3 border-purple-500 object-cover flex-shrink-0 shadow-lg mb-2"
+              className="w-16 h-16 rounded-full border-3 border-white object-cover flex-shrink-0 shadow-lg mb-2"
             />
-            <p className="text-xl font-bold text-teal-400">{member.name}</p>
+            <p className="text-xl font-bold text-white">{member.name}</p>
             <p className="text-gray-500 text-sm">{member.role}</p>
           </div>
         </div>
@@ -137,11 +137,11 @@ export default function MemberDashboard() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
           {/* Card de Empenho */}
           <div
-            className="bg-[#18162a] rounded-xl shadow-lg p-4 flex items-center justify-between border border-green-700 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-[#18162a] rounded-xl shadow-lg p-4 flex items-center justify-between border border-pink-400 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             onClick={() => openMetricDetails('empenho')}
           >
             <div className="flex items-center gap-4">
-              <FiZap className="text-green-400 text-4xl" />
+              <FiZap className="text-pink-400 text-4xl" />
               <div>
                 <h3 className="text-lg font-bold text-white">Empenho</h3>
                 <p className="text-gray-400 text-sm">Sua dedicação e produtividade.</p>
@@ -159,7 +159,7 @@ export default function MemberDashboard() {
                   cy="50%"
                 />
                 <circle
-                  className="text-green-500"
+                  className="text-pink-500"
                   strokeWidth="8"
                   strokeDasharray={2 * Math.PI * 30}
                   strokeDashoffset={(2 * Math.PI * 30) - (2 * Math.PI * 30 * member.empenho / 100)}
@@ -172,20 +172,20 @@ export default function MemberDashboard() {
                   style={{ transition: 'stroke-dashoffset 0.8s ease-in-out' }}
                 />
               </svg>
-              <span className="absolute text-xl font-bold text-green-400">{member.empenho}%</span>
+              <span className="absolute text-xl font-bold text-white">{member.empenho}%</span>
             </div>
           </div>
 
           {/* Card de Foco */}
           <div
-            className="bg-[#18162a] rounded-xl shadow-lg p-4 flex items-center justify-between border border-blue-700 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-[#18162a] rounded-xl shadow-lg p-4 flex items-center justify-between border border-yellow-400 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             onClick={() => openMetricDetails('foco')}
           >
             <div className="flex items-center gap-4">
-              <FiTarget className="text-blue-400 text-4xl" />
+              <FiTarget className="text-yellow-400 text-4xl" />
               <div>
                 <h3 className="text-lg font-bold text-white">Foco</h3>
-                <p className="text-gray-400 text-sm">Sua capacidade de concentração.</p>
+                <p className="text-gray-400 text-sm">Suas entregas e constância.</p>
               </div>
             </div>
             <div className="relative w-20 h-20 flex items-center justify-center flex-shrink-0">
@@ -200,7 +200,7 @@ export default function MemberDashboard() {
                   cy="50%"
                 />
                 <circle
-                  className="text-blue-500"
+                  className="text-yellow-400"
                   strokeWidth="8"
                   strokeDasharray={2 * Math.PI * 30}
                   strokeDashoffset={(2 * Math.PI * 30) - (2 * Math.PI * 30 * member.foco / 100)}
@@ -213,7 +213,7 @@ export default function MemberDashboard() {
                   style={{ transition: 'stroke-dashoffset 0.8s ease-in-out' }}
                 />
               </svg>
-              <span className="absolute text-xl font-bold text-blue-400">{member.foco}%</span>
+              <span className="absolute text-xl font-bold text-white">{member.foco}%</span>
             </div>
           </div>
         </div>

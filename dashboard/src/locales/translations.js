@@ -7,8 +7,8 @@
 export const translations = {
   pt: {
     // --- Traducao do Dashboard de RH ---
-    dashboardTitleHR: "Visão RH Estratégico",
-    dashboardSubtitleHR: "Bem-estar e Performance da Alcatéia",
+    dashboardTitleHR: "Dashboard RH",
+    dashboardSubtitleHR: "Performance do time",
     lastUpdate: "Última Atualização",
     teamHealth: "Saúde Geral da Equipe",
     teamEngagement: "Engajamento da Equipe",
@@ -20,9 +20,9 @@ export const translations = {
     collaboratorDetails: "Detalhes do Colaborador",
     role: "Cargo",
     email: "Email",
-    foco: "Foco", // Chave utilizada no HR Dashboard
-    empenho: "Empenho", // Chave utilizada no HR Dashboard
-    emotionalHealth: "Saúde Emocional", // Chave generica para "Saúde Emocional"
+    foco: "Foco", 
+    empenho: "Empenho", 
+    emotionalHealth: "Saúde Emocional", 
     insights: "Insights",
     copy: "Copiar",
     copied: "Copiado!",
@@ -35,23 +35,23 @@ export const translations = {
     noChange: "Sem alteração",
     increaseOf: "Aumento de",
     decreaseOf: "Queda de",
-    percentagePoints: "pontos percentuais", // Chave para "pontos percentuais" (usada se o formato "Xpp" for exibido)
+    percentagePoints: "pontos percentuais", 
     noTrendData: "Sem dados de tendência",
     noData: "Sem dados",
-    trend: "Tendência", // Chave para a palavra "Tendência"
+    trend: "Tendência", 
 
     // --- Traducao do Dashboard do Líder ---
     leaderDashboardTitle: "Dashboard do Líder",
-    leaderDashboardSubtitle: "Visão de Desempenho e Bem-estar da Equipe",
-    updateButton: "Atualizar Dashboard",
+    leaderDashboardSubtitle: " Desempenho da Equipe",
+    updateButton: "Atualizar",
     updatingButton: "Atualizando...",
     teamNamePrefix: "Equipe",
     detailedView: "Visão Detalhada",
     understandDashboard: "Entendendo seu Dashboard",
     overviewTitle: "Visão Geral",
-    overviewDescription: "Este painel é uma ferramenta estratégica para insights sobre desempenho e bem-estar da equipe.",
+    overviewDescription: "Este painel foi desenvolvido para ser uma ferramenta estratégica para insights sobre desempenho e bem-estar da equipe.",
     sloganTitle: "O sucesso de um é o sucesso de todos!",
-    sloganDescription: "Acreditamos na Alcatéia que o sucesso da equipe depende de cada pessoa, por isso mantenha toda sua equipe saudável.",
+    sloganDescription: "Na Alcatteia acreditamos que o sucesso da equipe depende de cada pessoa, por isso mantenha toda sua equipe saudável.",
     uniaoAttr: "União",
     comunicacaoAttr: "Comunicação",
     focoAttr: "Foco", // Chave para o atributo "Foco" no Leader Dashboard
@@ -115,8 +115,8 @@ export const translations = {
   },
   en: {
     // --- HR Dashboard Translations ---
-    dashboardTitleHR: "Strategic HR Overview",
-    dashboardSubtitleHR: "Team Well-being and Performance",
+    dashboardTitleHR: "HR Overview",
+    dashboardSubtitleHR: "Team Performance",
     lastUpdate: "Last Update",
     teamHealth: "Overall Team Health",
     teamEngagement: "Team Engagement",
@@ -150,8 +150,8 @@ export const translations = {
 
     // --- Leader Dashboard Translations ---
     leaderDashboardTitle: "Leader Dashboard",
-    leaderDashboardSubtitle: "Team Performance and Well-being Overview",
-    updateButton: "Update Dashboard",
+    leaderDashboardSubtitle: "Team Performance",
+    updateButton: "Update",
     updatingButton: "Updating...",
     teamNamePrefix: "Team",
     detailedView: "Detailed View",
@@ -159,7 +159,7 @@ export const translations = {
     overviewTitle: "Overview",
     overviewDescription: "This dashboard is a strategic tool for insights into team performance and well-being.",
     sloganTitle: "Everyone's success is everyone's success!",
-    sloganDescription: "We believe at Alcatéia that team success depends on each person, so keep your entire team healthy.",
+    sloganDescription: "We believe at Alcatteia that team success depends on each person, so keep your entire team healthy.",
     uniaoAttr: "Unity",
     comunicacaoAttr: "Communication",
     focoAttr: "Focus", // Attribute for Leader Dashboard
@@ -223,8 +223,8 @@ export const translations = {
   },
   es: {
     // --- Traducao do Dashboard de RH ---
-    dashboardTitleHR: "Visión Estratégica de RRHH",
-    dashboardSubtitleHR: "Bienestar y Rendimiento del Equipo",
+    dashboardTitleHR: "Visión de RRHH",
+    dashboardSubtitleHR: "Rendimiento del Equipo",
     lastUpdate: "Última Actualización",
     teamHealth: "Salud General del Equipo",
     teamEngagement: "Compromiso del Equipo",
@@ -258,8 +258,8 @@ export const translations = {
 
     // --- Traducao do Dashboard del Líder ---
     leaderDashboardTitle: "Panel del Líder",
-    leaderDashboardSubtitle: "Vista de Rendimiento y Bienestar del Equipo",
-    updateButton: "Actualizar Panel",
+    leaderDashboardSubtitle: "Vista de Rendimiento del Equipo",
+    updateButton: "Actualizar",
     updatingButton: "Actualizando...",
     teamNamePrefix: "Equipo",
     detailedView: "Vista Detallada",
@@ -267,7 +267,7 @@ export const translations = {
     overviewTitle: "Resumen",
     overviewDescription: "Este panel es una herramienta estratégica para obtener información sobre el rendimiento y el bienestar del equipo.",
     sloganTitle: "¡El éxito de uno es el éxito de todos!",
-    sloganDescription: "Creemos en Alcatéia que el éxito del equipo depende de cada persona, por eso mantén a todo tu equipo saludable.",
+    sloganDescription: "Creemos en Alcatteia que el éxito del equipo depende de cada persona, por eso mantén a todo tu equipo saludable.",
     uniaoAttr: "Unión",
     comunicacaoAttr: "Comunicación",
     focoAttr: "Enfoque", // Atributo para el Leader Dashboard
