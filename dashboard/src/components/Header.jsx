@@ -1,21 +1,27 @@
 import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi"; // Ícones para o menu hambúrguer
 import logo from "../assets/logo.png"; 
 
-export default function Header({ notificacoes = [], onAbrirNotificacoes, user }) {
-  const [menuAberto, setMenuAberto] = useState(false);
+export default function Header({ notificacoes = [], onAbrirNotificacoes, user, isMobile, isNavOpen, toggleNav }) {
+  const [menuAberto, setMenuAberto] = useState(false); // Estado para visibilidade do dropdown do perfil
   const notificacaoNaoLida = notificacoes.some(n => !n.lida);
 
   return (
-    <header className="w-full flex items-center justify-between px-8 py-4 bg-[#1a1332] shadow  border-b-2 border-white">
-      {/* Esquerda: Logo e nome */}
+    <header className="w-full flex items-center justify-between px-4 sm:px-8 py-4 bg-[#1a1332] shadow border-b-2 border-white">
+      {/* Seção esquerda: Botão Hambúrguer (visível apenas em telas mobile/tablet), Logo e nome da marca */}
       <div className="flex items-center gap-3">
+        {isMobile && ( // Renderiza o botão de hambúrguer apenas em telas mobile/tablet
+          <button onClick={toggleNav} className="text-white focus:outline-none mr-2">
+            {isNavOpen ? <FiX className="w-7 h-7" /> : <FiMenu className="w-7 h-7" />}
+          </button>
+        )}
         <img src={logo} alt="Logo" className="h-10 w-10 rounded-full" />
-        <span className="text-2xl font-raleway font-bold text-white tracking-wide">Alcatteia</span>
+        <span className="text-xl sm:text-2xl font-raleway font-bold text-white tracking-wide">Alcatteia</span>
       </div>
 
-      {/* Direita: Notificações e perfil */}
+      {/* Seção direita: Notificações e perfil do usuário */}
       <div className="flex items-center gap-6 relative">
-        {/* Sino de notificações */}
+        {/* Ícone de sino de notificações */}
         <button className="relative" onClick={onAbrirNotificacoes}>
           <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.002 6.002 0 0 0-4-5.659V4a2 2 0 1 0-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" />
@@ -25,7 +31,7 @@ export default function Header({ notificacoes = [], onAbrirNotificacoes, user })
           )}
         </button>
 
-        {/* Foto de perfil */}
+        {/* Imagem de perfil com dropdown */}
         <div className="relative">
           <button onClick={() => setMenuAberto((v) => !v)} className="focus:outline-none">
             <img
@@ -34,7 +40,7 @@ export default function Header({ notificacoes = [], onAbrirNotificacoes, user })
               className="w-9 h-9 rounded-full border-2 border-white object-cover"
             />
           </button>
-          {/* Dropdown do perfil */}
+          {/* Menu dropdown do perfil */}
           {menuAberto && (
             <div className="absolute right-0 mt-2 w-44 bg-white rounded shadow-lg z-50">
               <div className="px-4 py-2 text-gray-700 border-b">{user?.nome || "Usuário"}</div>

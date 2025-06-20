@@ -150,7 +150,7 @@ export default function LeaderTeamArea() {
   }
 
   return (
-    <section className="w-full max-w-6xl mx-auto mt-8 mb-8 px-4 sm:px-6 lg:px-8">
+    <section className="w-full max-w-[90%] mx-auto mt-8 mb-8 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>

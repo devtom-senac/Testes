@@ -106,17 +106,15 @@ const HrMetricCard = ({
   t,
   className,
 }) => {
-  // <--- ADICIONE 'className' AQUI
   return (
     <BaseCard
       className={`items-center justify-center min-h-[180px] ${className}`}
     >
-      <div className="flex items-center gap-3 mb-4">
-        {IconComponent && <IconComponent className="w-9 h-9 text-white-400" />}
+      <div className="flex flex-col md:flex-row items-center gap-3 mb-4 ">
+        {IconComponent && <IconComponent className="w-9 h-9 text-black-400" />}
         <h3 className="font-semibold text-white text-2xl">{title}</h3>
       </div>
       <div className="flex items-center gap-2 mb-2">
-        {/* A porcentagem é exibida com a cor branca fixa. */}
         <div className={`text-6xl font-bold text-white leading-none`}>
           {percent !== null ? `${percent}%` : t("noData")}
         </div>
@@ -166,7 +164,7 @@ const MemberSummaryCard = ({ member, onOpenDetails, t,  className }) => {
         </div>
         <div className="flex items-center justify-between text-gray-300">
           <span className="flex items-center gap-2 text-lg">
-            <FiHeart className="text-white" /> {t("emotionalHealth")}:
+            <FiHeart className="text-purple-500" /> {t("emotionalHealth")}:
           </span>
           {/* A porcentagem é exibida com a cor branca fixa. */}
           <span className={`text-white font-bold text-lg`}>
@@ -297,7 +295,7 @@ export default function HrDashboard() {
 
   return (
     <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto custom-scrollbar">
-      <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 h-full">
+      <div className="w-full max-w-[90%] mx-auto flex flex-col gap-8 h-full">
         {/* Cabeçalho do Dashboard, incluindo título, subtítulo, seletor de idioma e data da última atualização. */}
         <div className="flex justify-between items-end pb-4 border-b border-gray-700">
           <div>

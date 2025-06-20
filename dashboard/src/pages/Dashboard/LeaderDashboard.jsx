@@ -448,7 +448,7 @@ export default function LeaderDashboard() {
 
   return (
     <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto">
-      <div className="w-full max-w-6xl mx-auto flex flex-col gap-4 h-full">
+      <div className="w-full max-w-[90%] mx-auto flex flex-col gap-4 h-full">
         <div className="pt-2 pb-4 border-b border-gray-700 mb-2 flex items-center justify-between">
           <div>
             <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
@@ -556,7 +556,7 @@ export default function LeaderDashboard() {
             />
 
             <div className="flex flex-col gap-4 w-full md:w-[calc(60%-8px)] md:flex-shrink-0">
-              <div className="grid grid-cols-2 gap-4 h-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
                 {metricCards.map((card) => (
                   <MetricCard
                     key={card.id}

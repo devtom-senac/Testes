@@ -100,12 +100,11 @@ export default function MemberDashboard() {
 
   const copyFeedbackContent = (message) => {
     navigator.clipboard.writeText(message);
-    alert("Conteúdo do feedback copiado com sucesso!");
   };
 
   return (
     <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto">
-      <div className="w-full max-w-6xl mx-auto flex flex-col gap-4 h-full">
+      <div className="w-full max-w-[90%] mx-auto flex flex-col gap-4 h-full">
 
         {/* Header Principal - Título e Perfil do Usuário */}
         <div className="pt-2 pb-4 border-b border-gray-700 mb-2 flex flex-col md:flex-row items-center justify-between gap-4">
