@@ -1,71 +1,74 @@
+// Sidebar.jsx
 import React from 'react';
-import { NavLink } from "react-router-dom"; // Importa NavLink para navegação SPA
-import { FiClipboard, FiBarChart2, FiPhone, FiUsers } from 'react-icons/fi'; // Ícones para os itens do menu
+import { NavLink } from 'react-router-dom';
+import { FiHome, FiUsers, FiClipboard, FiPhone, FiX } from 'react-icons/fi'; // Importe FiX para o botão de fechar
 
-/**
- * Sidebar é o componente de navegação lateral da aplicação.
- * Gerencia seu próprio estado de visibilidade baseado em props passadas pelo pai.
- * @param {Object} props - As propriedades passadas para o componente.
- * @param {boolean} props.isMobile - Indica se a tela está em modo mobile.
- * @param {boolean} props.isSidebarOpen - Controla o estado de abertura/fechamento da Sidebar.
- * @param {Function} props.toggleSidebar - Função para alternar o estado de abertura da Sidebar.
- */
 export default function Sidebar({ isMobile, isSidebarOpen, toggleSidebar }) {
-
-  // Definição dos itens de navegação da Sidebar.
-  // Cada item inclui um rótulo, um ícone e o caminho (path) para a rota correspondente.
-  const items = [
-    { label: "Dashboard", icon: <FiBarChart2 />, path: "/" },
-    { label: "Kanban", icon: <FiClipboard />, path: "/kanban" },
-    { label: "Call", icon: <FiPhone />, path: "/call" },
-    { label: "Equipe", icon: <FiUsers />, path: "/equipe" }
+  // Lista de itens de navegação (exemplo)
+  const navItems = [
+    { name: 'Kanban', icon: FiClipboard, path: '/kanban' },
+    { name: 'Dashboard', icon: FiHome, path: '/' },
+    { name: 'Chamada', icon: FiPhone, path: '/call' },
+    { name: 'Área da Equipe', icon: FiUsers, path: '/equipe' },
   ];
 
   return (
     <>
-      {/* Overlay escuro: Visível apenas em telas mobile quando a sidebar está aberta.
-          Cria um fundo semitransparente que pode ser clicado para fechar a sidebar. */}
+      {/* Overlay para mobile quando a sidebar está aberta */}
       {isMobile && isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 sm:hidden"
-          onClick={toggleSidebar} // Ao clicar no overlay, a sidebar é fechada
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden" // Z-index maior que o Topbar (z-10)
+          onClick={toggleSidebar} // Clica no overlay para fechar a sidebar
         ></div>
       )}
 
-      {/* Componente Sidebar (aside) */}
+      {/* Sidebar principal */}
       <aside
-        className={`fixed sm:relative top-0 left-0 h-full z-40 w-64 bg-[#160F23] p-4 transition-transform duration-300 transform
-          ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'} `}
-        style={isMobile ? { top: '4rem' } : {}} // Adiciona um offset do Topbar em mobile (assumindo Topbar tem 4rem ou 64px de altura)
+        className={`
+          flex-shrink-0 bg-[#160F23] text-gray-200 h-full overflow-y-auto custom-scrollbar
+          transform transition-transform duration-300 ease-in-out
+          ${isMobile 
+            ? `fixed inset-y-0 left-0 w-64 z-40 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}` 
+            : 'static w-64'
+          }
+          lg:static lg:translate-x-0 lg:w-64 // Garante que a sidebar esteja sempre visível no desktop (lg e acima)
+        `}
       >
-        {/* Cabeçalho da Sidebar: Título da Aplicação */}
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-white">Alcatteia</h1>
+        <div className="p-6 flex items-center justify-between lg:justify-center border-b border-[#2A1C3A]">
+          <h2 className="text-2xl font-bold text-white">Logo</h2>
+          {/* Botão de fechar a sidebar (visível apenas em mobile) */}
+          {isMobile && (
+            <button
+              className="lg:hidden p-2 rounded-full hover:bg-[#2A1C3A] text-gray-300"
+              onClick={toggleSidebar}
+              aria-label="Fechar menu"
+            >
+              <FiX size={24} />
+            </button>
+          )}
         </div>
 
-        {/* Navegação Principal */}
-        <nav className="space-y-2">
-          {items.map(({ label, icon, path }) => (
-            <NavLink // Usa NavLink do React Router DOM para navegação.
-              key={label}
-              to={path} // Define o caminho da rota para onde o link navegará.
-              className={({ isActive }) => // Função para aplicar classes CSS baseadas no estado 'isActive' da rota.
-                `flex items-center gap-3 px-4 py-3 rounded-lg transition-colors duration-200 ${
-                  isActive
-                    ? "bg-[#2A1C3A] text-white font-semibold" // Estilo para link ativo
-                    : "text-gray-300 hover:bg-[#2A1C3A] hover:text-white" // Estilo para link normal/hover
-                }`
-              }
-              // Fecha a sidebar em dispositivos móveis quando um link é clicado,
-              // melhorando a experiência do usuário.
-              onClick={isMobile ? toggleSidebar : undefined}
-              // Atributo ARIA para acessibilidade, indicando a página atual.
-              aria-current={({ isActive }) => isActive ? "page" : undefined}
-            >
-              <span className="text-lg">{icon}</span> {/* Renderiza o ícone */}
-              <span>{label}</span> {/* Renderiza o rótulo do link */}
-            </NavLink>
-          ))}
+        <nav className="mt-8">
+          <ul>
+            {navItems.map((item) => (
+              <li key={item.name} className="mb-2">
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `flex items-center gap-3 px-6 py-3 transition-colors duration-200
+                     ${isActive
+                      ? "bg-purple-700 text-white font-semibold border-l-4 border-purple-500"
+                      : "hover:bg-[#2A1C3A] text-gray-300"
+                    }`
+                  }
+                  onClick={isMobile ? toggleSidebar : undefined} // Fecha a sidebar ao clicar em um item no mobile
+                >
+                  <item.icon size={20} />
+                  <span>{item.name}</span>
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </nav>
       </aside>
     </>

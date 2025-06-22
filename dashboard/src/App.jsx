@@ -47,8 +47,8 @@ function AppContent() {
    */
   useEffect(() => {
     const handleResize = () => {
-      const mobileBreakpoint = 1130; // Corresponde ao breakpoint 'md' do Tailwind CSS
-      const currentIsMobile = window.innerWidth <= mobileBreakpoint;
+      const tabletBreakpoint = 1024; // Corresponde ao breakpoint 'md' do Tailwind CSS
+      const currentIsMobile = window.innerWidth < tabletBreakpoint;
       setIsMobile(currentIsMobile);
 
       // Se a tela se tornar desktop, garante que a Sidebar esteja fechada
@@ -165,7 +165,7 @@ function AppContent() {
           toggleSidebar={toggleSidebar} // Passa a função para a Sidebar se fechar ao clicar em um link em mobile
         />
         {/* Main Content Area: Onde as páginas são renderizadas pelo React Router */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto">
           {/* Definição das rotas da aplicação */}
           <Routes>
             {/* Rota raiz para o Dashboard dinâmico baseado no perfil */}

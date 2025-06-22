@@ -294,9 +294,8 @@ export default function HrDashboard() {
   };
 
   return (
-    <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto custom-scrollbar">
-      <div className="w-full max-w-[90%] mx-auto flex flex-col gap-8 h-full">
-        {/* Cabeçalho do Dashboard, incluindo título, subtítulo, seletor de idioma e data da última atualização. */}
+    <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center overflow-y-auto custom-scrollbar">
+     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 flex flex-col gap-4 sm:gap-6 md:gap-8 h-full">
         <div className="flex justify-between items-end pb-4 border-b border-gray-700">
           <div>
             {/* Título do Dashboard de RH, usando a chave de tradução do locales. */}
@@ -344,7 +343,7 @@ export default function HrDashboard() {
         {/* Seção de Métricas Individuais dos Membros. */}
         <div className="mt-8">
           <div className="flex items-center gap-4 mb-6">
-            <FiUser className="w-10 h-10 text-white" />
+            <FiUser className="w-10 h-10 text-white flex " />
             <h2 className="text-3xl font-bold text-purple-400">
               {t("individualVision")}
             </h2>

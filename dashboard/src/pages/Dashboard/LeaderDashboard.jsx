@@ -447,8 +447,8 @@ export default function LeaderDashboard() {
   ];
 
   return (
-    <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center p-6 overflow-y-auto">
-      <div className="w-full max-w-[90%] mx-auto flex flex-col gap-4 h-full">
+    <main className="flex-1 bg-[#0B0011] text-gray-200 font-poppins flex justify-center overflow-y-auto">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 flex flex-col gap-4 h-full">
         <div className="pt-2 pb-4 border-b border-gray-700 mb-2 flex items-center justify-between">
           <div>
             <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
