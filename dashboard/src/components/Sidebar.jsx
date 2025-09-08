@@ -9,7 +9,7 @@ export default function Sidebar({ isMobile, isSidebarOpen, toggleSidebar }) {
     { name: 'Kanban', icon: FiClipboard, path: '/kanban' },
     { name: 'Dashboard', icon: FiHome, path: '/' },
     { name: 'Chamada', icon: FiPhone, path: '/call' },
-    { name: 'Área da Equipe', icon: FiUsers, path: '/equipe' },
+    { name: 'Área da Equipe', icon: FiUsers, path: '/dashboard/equipe' },
   ];
 
   return (

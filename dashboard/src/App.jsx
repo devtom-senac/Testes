@@ -1,5 +1,6 @@
+// src/App.jsx
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 // Componentes de layout globais
 import Topbar from "./components/Topbar";
@@ -12,94 +13,61 @@ import HrDashboard from "./pages/Dashboard/HrDashboard";
 import MemberDashboard from "./pages/Dashboard/MemberDashboard";
 
 // Importação das páginas funcionais (Kanban, Call)
-import KanbanPage from "./pages/Kanban";
+import Kanban from "./pages/Kanban";
 import CallPage from "./pages/Call";
 
-// Dados mockados para simulação de notificações e usuário.
-// Em uma aplicação real, estes dados viriam de uma API ou de um contexto global de autenticação.
+// Importe a página de acesso (AccountAccess)
+import AccountAccess from "./pages/AccountAccess/AccountAccess";
+
+// Dados mockados
 const notificacoes = [
   { id: 1, texto: "Reunião às 10h", lida: false },
   { id: 2, texto: "Nova tarefa atribuída", lida: true },
 ];
 const user = {
   nome: "Heverton Souza",
-  foto: "/assets/perfil.png", // Caminho da imagem do perfil do usuário
+  foto: "/assets/perfil.png",
 };
 
-/**
- * AppContent é o componente principal que gerencia o estado da aplicação
- * (perfil do usuário, estado da sidebar) e define a estrutura do layout
- * com Topbar, Sidebar e o conteúdo das rotas.
- */
-function AppContent() {
-  // Estado para simular o perfil do usuário logado ('leader', 'hr', 'member')
-  const [profile, setProfile] = useState("leader");
-  // Hook de navegação do React Router DOM
+// ============================================================================
+// COMPONENTE: DashboardLayoutContent
+// ============================================================================
+function DashboardLayoutContent() {
+  const [profile, setProfile] = useState("leader"); // O estado profile ainda pode ser útil para outras lógicas ou para inicializar
   const navigate = useNavigate();
 
-  // Estados para controlar a visibilidade e o comportamento responsivo da Sidebar
-  const [isMobile, setIsMobile] = useState(false); // Indica se a tela está em tamanho mobile
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Controla a abertura/fechamento da Sidebar em mobile
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  /**
-   * useEffect para detectar o tamanho da tela e atualizar o estado 'isMobile'.
-   * Também garante que a Sidebar esteja fechada em desktops.
-   */
   useEffect(() => {
     const handleResize = () => {
-      const tabletBreakpoint = 1024; // Corresponde ao breakpoint 'md' do Tailwind CSS
+      const tabletBreakpoint = 1024;
       const currentIsMobile = window.innerWidth < tabletBreakpoint;
       setIsMobile(currentIsMobile);
-
-      // Se a tela se tornar desktop, garante que a Sidebar esteja fechada
       if (!currentIsMobile) {
         setIsSidebarOpen(false);
       }
     };
-
-    // Executa a função uma vez na montagem inicial para definir o estado correto
     handleResize();
-    // Adiciona o event listener para monitorar mudanças no tamanho da janela
     window.addEventListener("resize", handleResize);
-
-    // Função de limpeza: remove o event listener ao desmontar o componente
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Array de dependências vazio garante que o efeito rode apenas uma vez na montagem
+  }, []);
 
-  /**
-   * Função para alternar o estado de abertura/fechamento da Sidebar.
-   */
   const toggleSidebar = () => {
     setIsSidebarOpen(prev => !prev);
   };
 
-  /**
-   * Função para simular a mudança de perfil do usuário.
-   * Redireciona para a rota raiz (dashboard) após a mudança.
-   */
+  // Ajustar a navegação para as novas rotas de perfil
   const handleProfileChange = (newProfile) => {
-    setProfile(newProfile);
-    navigate("/"); // Navega para o dashboard do novo perfil
+    setProfile(newProfile); // Atualiza o estado interno
+    // Navega para a rota específica do dashboard do novo perfil
+    navigate(`/dashboard/${newProfile}`);
   };
 
-  /**
-   * Componente condicional que renderiza o Dashboard apropriado
-   * com base no perfil do usuário ativo.
-   */
-  const CurrentDashboard = () => {
-    if (profile === "leader") return <LeaderDashboard />;
-    if (profile === "hr") return <HrDashboard />;
-    if (profile === "member") return <MemberDashboard />;
-    return <p className="text-white text-center text-xl mt-20">Selecione um perfil para visualizar o dashboard.</p>;
-  };
+  // CurrentDashboard não é mais necessário aqui, as rotas cuidarão disso.
 
-  /**
-   * Componente condicional que controla o acesso à Área da Equipe.
-   * Atualmente, apenas o perfil 'leader' tem acesso. Outros perfis
-   * são redirecionados e veem uma mensagem de acesso negado.
-   */
   const CurrentTeamArea = () => {
     if (profile === "leader") {
       return <LeaderTeamArea />;
@@ -112,7 +80,7 @@ function AppContent() {
             Por favor, retorne ao seu dashboard.
           </p>
           <button
-            onClick={() => navigate("/")} // Botão para retornar ao dashboard
+            onClick={() => navigate(`/dashboard/${profile}`)} // Retorna para o dashboard do perfil atual
             className="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-lg transition-colors font-semibold"
           >
             Voltar para o Dashboard
@@ -124,7 +92,7 @@ function AppContent() {
 
   return (
     <div className="flex flex-col h-screen bg-[#0B0011]">
-      {/* Seletor de perfil (apenas para simulação de desenvolvimento) */}
+      {/* Seletor de perfil (simulação) */}
       <div className="bg-gray-900 text-white px-4 py-2 flex gap-4 items-center">
         <span>Perfil Ativo (Simulação):</span>
         <button
@@ -147,38 +115,41 @@ function AppContent() {
         </button>
       </div>
 
-      {/* Topbar: Barra superior de navegação/informações */}
       <Topbar
         notificacoes={notificacoes}
         user={user}
-        isMobile={isMobile}         // Passa o estado de mobile para o Topbar (para mostrar/esconder o botão de menu)
-        isSidebarOpen={isSidebarOpen} // Passa o estado da sidebar para o Topbar (se precisar de lógica visual)
-        toggleSidebar={toggleSidebar} // Passa a função para abrir/fechar a sidebar
+        isMobile={isMobile}
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
       />
 
-      {/* Conteúdo principal: Sidebar e Área das Rotas */}
       <div className="flex flex-1 min-h-0">
-        {/* Sidebar: Menu de navegação lateral */}
         <Sidebar
-          isMobile={isMobile}         // Passa o estado de mobile para a Sidebar
-          isSidebarOpen={isSidebarOpen} // Passa o estado de abertura/fechamento da Sidebar
-          toggleSidebar={toggleSidebar} // Passa a função para a Sidebar se fechar ao clicar em um link em mobile
+          isMobile={isMobile}
+          isSidebarOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
         />
-        {/* Main Content Area: Onde as páginas são renderizadas pelo React Router */}
+        {/* Main Content Area para as rotas internas do dashboard */}
         <main className="flex-1 overflow-y-auto">
-          {/* Definição das rotas da aplicação */}
           <Routes>
-            {/* Rota raiz para o Dashboard dinâmico baseado no perfil */}
-            <Route path="/" element={<CurrentDashboard />} />
-            {/* Rota para a página Kanban */}
-            <Route path="/kanban" element={<KanbanPage />} />
-            {/* Rota para a página Call */}
+            {/* Rotas dos Dashboards por perfil */}
+            <Route path="/leader" element={<LeaderDashboard />} />
+            <Route path="/hr" element={<HrDashboard />} />
+            <Route path="/member" element={<MemberDashboard />} />
+
+            {/* Rota padrão para /dashboard (redireciona para /dashboard/leader) */}
+            <Route path="/" element={<LeaderDashboard />} />
+            {/* Ou, se preferir redirecionar: */}
+            {/* <Route path="/" element={<Navigate to="/dashboard/leader" replace />} /> */}
+
+
+            {/* Outras rotas internas (relativas a /dashboard/) */}
+        
             <Route path="/call" element={<CallPage />} />
-            {/* Rota para a Área da Equipe, com controle de acesso por perfil */}
             <Route path="/equipe" element={<CurrentTeamArea />} />
 
-            {/* Rota de fallback para caminhos não encontrados (404) */}
-            <Route path="*" element={<p className="text-white text-center text-xl mt-20">404 - Página Não Encontrada.</p>} />
+            {/* 404 para rotas dentro de /dashboard/* que não forem encontradas */}
+            <Route path="*" element={<p className="text-white text-center text-xl mt-20">404 - Página Interna do Dashboard Não Encontrada.</p>} />
           </Routes>
         </main>
       </div>
@@ -186,14 +157,25 @@ function AppContent() {
   );
 }
 
-/**
- * Componente App que envolve o AppContent com o BrowserRouter.
- * O BrowserRouter é necessário para que as rotas do React Router DOM funcionem.
- */
-export default function App() {
+// ============================================================================
+// Componente App principal
+// ============================================================================
+function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        {/* Rota principal de acesso */}
+        <Route path="/" element={<AccountAccess />} />
+        <Route path="/account-access" element={<AccountAccess />} />
+
+        {/* A rota /dashboard/* que renderiza o novo componente DashboardLayoutContent */}
+        <Route path="/dashboard/*" element={<DashboardLayoutContent />} />
+
+        {/* Rota de fallback para qualquer caminho não encontrado na aplicação */}
+        <Route path="*" element={<p className="text-white text-center text-xl mt-20">404 - Página Principal Não Encontrada.</p>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
