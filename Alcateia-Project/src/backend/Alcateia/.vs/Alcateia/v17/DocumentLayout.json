@@ -1,0 +1,683 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\middlewares\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\middlewares\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\controllers\\checkinscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\controllers\\checkinscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\repositories\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\services\\moodv1calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\services\\moodv1calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\services\\datetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\services\\datetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\security\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\security\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\data\\configurations\\teamconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\data\\configurations\\teamconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.infrastructure\\data\\alcateiadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.infrastructure\\data\\alcateiadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\interfaces\\services\\idatetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\interfaces\\services\\idatetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\interfaces\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\interfaces\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\interfaces\\repositories\\iteamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\interfaces\\repositories\\iteamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\moodcheckins\\getuserhistory\\getuserhistoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\moodcheckins\\getuserhistory\\getuserhistoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\moodcheckins\\getuserhistory\\getuserhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\moodcheckins\\getuserhistory\\getuserhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\moodcheckins\\registercheckin\\registercheckinhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\moodcheckins\\registercheckin\\registercheckinhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\moodcheckins\\registercheckin\\registercheckincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\moodcheckins\\registercheckin\\registercheckincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\teams\\createteam\\createteamcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\teams\\createteam\\createteamcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\teams\\getteamsummary\\getteamsummaryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\teams\\getteamsummary\\getteamsummaryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\interfaces\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\interfaces\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\teams\\getteamsummary\\getteamsummaryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\teams\\getteamsummary\\getteamsummaryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\features\\teams\\createteam\\createteamhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\features\\teams\\createteam\\createteamhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\moodcheckins\\getuserhistory\\getuserhistoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\moodcheckins\\getuserhistory\\getuserhistoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\moodcheckins\\getuserhistory\\getuserhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\moodcheckins\\getuserhistory\\getuserhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\moodcheckins\\registercheckin\\registercheckincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\moodcheckins\\registercheckin\\registercheckincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.application\\moodcheckins\\registercheckin\\registercheckinhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.application\\moodcheckins\\registercheckin\\registercheckinhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\enums\\moodstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\enums\\moodstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\interfaces\\iattributecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\interfaces\\iattributecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\entities\\moodcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\entities\\moodcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\entities\\healthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\entities\\healthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|c:\\users\\nasci\\source\\repos\\testes\\alcateia-project\\src\\backend\\alcateia\\alcateia\\alcateia.domain\\entities\\teamattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460C43B1-FA56-4C4E-ADB6-58D531E52743}|Alcateia\\Alcateia.csproj|solutionrelative:alcateia\\alcateia.domain\\entities\\teamattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Middlewares\\ExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Middlewares\\ExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Middlewares\\ExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Middlewares\\ExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:19:59.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MiddlewareExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Extensions\\MiddlewareExtensions.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Extensions\\MiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:19:15.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Program.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Program.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Program.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:16:48.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:18:56.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckinsController.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Controllers\\CheckinsController.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Controllers\\CheckinsController.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Controllers\\CheckinsController.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Controllers\\CheckinsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:18:06.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.API\\Controllers\\TeamsController.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.API\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.API\\Controllers\\TeamsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:17:54.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:17:15.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TeamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\TeamRepository.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Repositories\\TeamRepository.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\TeamRepository.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Repositories\\TeamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:17:05.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:16:55.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MoodV1Calculator.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Services\\MoodV1Calculator.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Services\\MoodV1Calculator.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Services\\MoodV1Calculator.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Services\\MoodV1Calculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:16:34.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DateTimeService.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Services\\DateTimeService.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Services\\DateTimeService.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Services\\DateTimeService.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Services\\DateTimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:16:18.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IdentityService.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Security\\IdentityService.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Security\\IdentityService.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Security\\IdentityService.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Security\\IdentityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:16:08.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:14:26.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TeamConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:14:07.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AlcateiaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\AlcateiaDbContext.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Infrastructure\\Data\\AlcateiaDbContext.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Infrastructure\\Data\\AlcateiaDbContext.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Infrastructure\\Data\\AlcateiaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:13:33.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IDateTimeService.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Services\\IDateTimeService.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Interfaces\\Services\\IDateTimeService.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Services\\IDateTimeService.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Interfaces\\Services\\IDateTimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:12:46.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:12:34.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ITeamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\ITeamRepository.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\ITeamRepository.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\ITeamRepository.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\ITeamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:12:25.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetUserHistoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:10:08.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetUserHistoryQuery.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:09:57.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterCheckinHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:09:23.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RegisterCheckinCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:09:11.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Interfaces\\Repositories\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:42:06.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateTeamCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamCommand.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamCommand.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamCommand.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:50:27.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GetTeamSummaryQuery.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryQuery.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryQuery.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryQuery.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:51:14.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GetTeamSummaryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\Teams\\GetTeamSummary\\GetTeamSummaryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:51:26.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateTeamHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\Features\\Teams\\CreateTeam\\CreateTeamHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:50:45.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GetUserHistoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:48:07.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetUserHistoryQuery.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\MoodCheckins\\GetUserHistory\\GetUserHistoryQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:47:43.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegisterCheckinCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:46:57.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RegisterCheckinHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Application\\MoodCheckins\\RegisterCheckin\\RegisterCheckinHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:47:13.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAttributeCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Interfaces\\IAttributeCalculator.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Interfaces\\IAttributeCalculator.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Interfaces\\IAttributeCalculator.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Interfaces\\IAttributeCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:29:03.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MoodStatus.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Enums\\MoodStatus.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Enums\\MoodStatus.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Enums\\MoodStatus.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Enums\\MoodStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:24:58.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Alcateia",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.csproj",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.csproj",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.csproj",
+              "RelativeToolTip": "Alcateia\\Alcateia.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-04T17:18:19.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "MoodCheckin.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\MoodCheckin.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Entities\\MoodCheckin.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\MoodCheckin.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Entities\\MoodCheckin.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA/wB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:30:43.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TeamAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\TeamAttribute.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Entities\\TeamAttribute.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\TeamAttribute.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Entities\\TeamAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:31:20.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HealthAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\HealthAttribute.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Entities\\HealthAttribute.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\HealthAttribute.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Entities\\HealthAttribute.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:25:45.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:31:32.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\Team.cs",
+              "RelativeDocumentMoniker": "Alcateia\\Alcateia.Domain\\Entities\\Team.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\Testes\\Alcateia-Project\\src\\backend\\Alcateia\\Alcateia\\Alcateia.Domain\\Entities\\Team.cs",
+              "RelativeToolTip": "Alcateia\\Alcateia.Domain\\Entities\\Team.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:31:44.916Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
